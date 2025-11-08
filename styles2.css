@@ -74,7 +74,7 @@ body {
 /* Page Wrapper with White Gutters */
 .page-wrapper {
     background-color: #ffffff;
-    padding: 80px 60px 60px;
+    padding: 5px 60px 60px;
     margin-top: 80px;
 }
 
@@ -324,6 +324,130 @@ body {
     color: #4a4a4a;
 }
 
+/* Section Three - Resources & Downloads */
+.section-three {
+    background-color: #f8f9fa;
+    padding: 100px 60px;
+}
+
+.resources-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.resources-header h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.resources-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #4a4a4a;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.resource-item {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #00b894;
+}
+
+.resource-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #f0f8f6;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.resource-icon svg {
+    stroke: #00b894;
+}
+
+.resource-item:hover .resource-icon {
+    background-color: #00b894;
+    transform: scale(1.05);
+}
+
+.resource-item:hover .resource-icon svg {
+    stroke: #ffffff;
+}
+
+.resource-item h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.resource-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.download-btn:hover {
+    background-color: #00b894;
+    transform: translateX(3px);
+}
+
+.download-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover svg {
+    transform: translateY(2px);
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .left-panel {
@@ -348,6 +472,18 @@ body {
 
     .services-container {
         gap: 60px;
+    }
+
+    .section-three {
+        padding: 80px 40px;
+    }
+
+    .resources-header h2 {
+        font-size: 42px;
+    }
+
+    .resources-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
@@ -405,6 +541,14 @@ body {
     .description-content {
         position: relative;
         min-height: auto;
+    }
+
+    .section-three {
+        padding: 60px 20px;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -475,5 +619,29 @@ body {
 
     .description-content p {
         font-size: 16px;
+    }
+
+    .section-three {
+        padding: 40px 15px;
+    }
+
+    .resources-header h2 {
+        font-size: 36px;
+    }
+
+    .resources-header p {
+        font-size: 16px;
+    }
+
+    .resource-item {
+        padding: 30px;
+    }
+
+    .resource-item h3 {
+        font-size: 20px;
+    }
+
+    .resource-item p {
+        font-size: 14px;
     }
 }
