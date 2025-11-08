@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ Operations - Operational Excellence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="examples/AZ-OPERTATIONS-LOGO.png" alt="AZ Operations Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#marketplace">Marketplace</a>
+                <a href="#learn">Learn</a>
+                <a href="#resources">Resources</a>
+            </div>
+            <button class="btn-dashboard">View Dashboard</button>
+        </div>
+    </nav>
+
+    <!-- Main Content Split with Gutters -->
+    <div class="page-wrapper">
+        <div class="container">
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <div class="content">
+                    <h1 class="main-heading">Operations</h1>
+                    <h2 class="sub-heading">Optimize Every Process. Maximize Every Opportunity</h2>
+                    <p class="body-text">Transform your business operations from chaotic to systematic. Our comprehensive operational consulting ensures your business runs at peak efficiency while you focus on strategic growth.</p>
+                    <button class="btn-cta">
+                        <span class="btn-text">Get your Free Ops Assessment</span>
+                        <span class="arrow-wrapper">
+                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Panel - Video -->
+            <div class="right-panel">
+                <video autoplay muted loop playsinline>
+                    <source src="examples/AdobeStock_556642719_Video_HD_Preview.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Two - Services List with Rollover -->
+    <section class="section-two">
+        <div class="section-wrapper">
+            <div class="services-container">
+                <!-- Left Side - Service List -->
+                <div class="services-list">
+                    <div class="service-item" data-service="assessment">
+                        <h3>360° Operational Assessment</h3>
+                    </div>
+                    <div class="service-item" data-service="mapping">
+                        <h3>Process & Responsibility Mapping</h3>
+                    </div>
+                    <div class="service-item" data-service="scalability">
+                        <h3>Scalability Implementation</h3>
+                    </div>
+                    <div class="service-item" data-service="efficiency">
+                        <h3>Efficiency Optimization</h3>
+                    </div>
+                    <div class="service-item" data-service="dashboard">
+                        <h3>Dashboard & KPI Development</h3>
+                    </div>
+                    <div class="service-item" data-service="system">
+                        <h3>Custom System Design</h3>
+                    </div>
+                    <div class="service-item" data-service="monitoring">
+                        <h3>Ongoing Operations Monitoring</h3>
+                    </div>
+                </div>
+
+                <!-- Right Side - Description Display -->
+                <div class="service-description">
+                    <div class="description-content" id="assessment">
+                        <h4>360° Operational Assessment</h4>
+                        <p>Comprehensive analysis of your entire business operation. We evaluate every touchpoint, process, and system to identify gaps, inefficiencies, and opportunities for optimization. Get a complete picture of where your business stands and where it can go.</p>
+                    </div>
+                    <div class="description-content" id="mapping">
+                        <h4>Process & Responsibility Mapping</h4>
+                        <p>Clear documentation of who does what, when, and how. We create detailed process maps and responsibility matrices that eliminate confusion, reduce bottlenecks, and ensure accountability across your entire organization.</p>
+                    </div>
+                    <div class="description-content" id="scalability">
+                        <h4>Scalability Implementation</h4>
+                        <p>Build systems and processes that grow with your business. We design scalable frameworks that handle increased volume without proportional increases in complexity or cost, ensuring smooth growth from startup to enterprise.</p>
+                    </div>
+                    <div class="description-content" id="efficiency">
+                        <h4>Efficiency Optimization</h4>
+                        <p>Streamline operations to do more with less. We eliminate waste, automate repetitive tasks, and optimize workflows to maximize output while minimizing time, cost, and effort. Transform your operation into a lean, efficient machine.</p>
+                    </div>
+                    <div class="description-content" id="dashboard">
+                        <h4>Dashboard & KPI Development</h4>
+                        <p>Real-time visibility into what matters most. We design custom dashboards and key performance indicators that give you actionable insights at a glance, enabling data-driven decisions and proactive management.</p>
+                    </div>
+                    <div class="description-content" id="system">
+                        <h4>Custom System Design</h4>
+                        <p>Tailored solutions that fit your unique needs. We design and implement custom operational systems, workflows, and tools that align perfectly with your business model, goals, and team capabilities.</p>
+                    </div>
+                    <div class="description-content" id="monitoring">
+                        <h4>Ongoing Operations Monitoring</h4>
+                        <p>Continuous oversight and optimization. We provide ongoing monitoring, regular check-ins, and proactive adjustments to ensure your operations stay optimized as your business evolves and market conditions change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Rollover functionality for service items
+        const serviceItems = document.querySelectorAll('.service-item');
+        const descriptions = document.querySelectorAll('.description-content');
+
+        // Show first item by default
+        descriptions[0].classList.add('active');
+        serviceItems[0].classList.add('active');
+
+        serviceItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const serviceId = this.getAttribute('data-service');
+
+                // Remove active class from all items and descriptions
+                serviceItems.forEach(si => si.classList.remove('active'));
+                descriptions.forEach(desc => desc.classList.remove('active'));
+
+                // Add active class to current item and corresponding description
+                this.classList.add('active');
+                document.getElementById(serviceId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

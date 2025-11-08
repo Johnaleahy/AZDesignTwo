@@ -1,0 +1,205 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Container - Edge to Edge Split */
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 50%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    position: relative;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+.btn-buy-tickets {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buy-tickets:hover {
+    background-color: #333333;
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    max-width: 600px;
+}
+
+.brand-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.event-details {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.btn-cta {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 16px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.btn-cta:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Right Panel - Video */
+.right-panel {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-panel video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-panel {
+        padding: 30px 40px;
+        min-height: 100vh;
+    }
+
+    .right-panel {
+        height: 100vh;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .brand-name {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-panel {
+        padding: 20px 30px;
+    }
+
+    .brand-name {
+        font-size: 60px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
