@@ -37,7 +37,7 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 150px;
     width: auto;
 }
 
@@ -89,9 +89,9 @@ nav a:hover {
 
 .brand-name {
     font-family: 'Inter', sans-serif;
-    font-size: 120px;
+    font-size: 72px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 30px;
     color: #ffffff;
 }
@@ -201,5 +201,80 @@ nav a:hover {
 
     .description {
         font-size: 16px;
+    }
+}
+
+/* Section Two - Partner Logos */
+.section-logos {
+    background-color: #ffffff;
+    padding: 80px 60px;
+}
+
+.logos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+.logo-item img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.logo-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive for logos section */
+@media (max-width: 1024px) {
+    .section-logos {
+        padding: 60px 40px;
+    }
+
+    .logos-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .logo-item img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-logos {
+        padding: 40px 20px;
+    }
+
+    .logos-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .logo-item img {
+        width: 120px;
+        height: 120px;
     }
 }
